@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:layout_margin="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:id="@+id/view_1"
+        android:layout_width="@dimen/_46sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@color/colorError"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:src="@drawable/ic_error"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_7sdp"
+            app:tint="@color/white"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/cancel_button"
+        android:contentDescription="@string/app_name"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_cancel"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"/>
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@color/colorError"
+        app:layout_constraintTop_toBottomOf="@id/view_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/error_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/error"
+        android:textColor="@color/colorError"
+        android:textSize="@dimen/_20ssp"
+        android:fontFamily="@font/poppins_black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_1"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_6sdp"/>
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium_italic"
+        android:text="\u25CF Please Input a valid username \n\u25CF Please Input a correct email \n\u25CF Password must be at least 8 digits long and Contain an Uppercase and a number"
+        app:layout_constraintTop_toTopOf="@id/view_2"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginHorizontal="@dimen/_7sdp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorError"
+        app:cornerRadius="@dimen/_8sdp"
+        app:strokeColor="@color/colorError"
+        android:fontFamily="@font/poppins_light"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/error_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:text="@string/cancel"
+        android:textColor="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/CustomButton"
+        app:cornerRadius="@dimen/_8sdp"
+        app:strokeColor="@color/colorError"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/error_text"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintEnd_toStartOf="@id/button_cancel"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:text="@string/ok"
+        android:textColor="@color/colorError"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
